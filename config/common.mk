@@ -117,6 +117,11 @@ PRODUCT_PACKAGES += \
     libFFmpegExtractor \
     libnamparser
 
+# Workaround - downgrade hostapd for fixing issue with wifi tethering
+PRODUCT_COPY_FILES += \
+    vendor/slim/proprietary/bin/hostapd:system/bin/hostapd \
+    vendor/slim/proprietary/bin/hostapd_cli:system/bin/hostapd_cli
+
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
 
