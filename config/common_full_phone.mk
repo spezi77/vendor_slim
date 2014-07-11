@@ -1,6 +1,9 @@
 # Inherit common stuff
 $(call inherit-product, vendor/slim/config/common.mk)
 
+# Bring in Evervolv a2sd stuff
+$(call inherit-product, vendor/slim/config/tools.mk)
+
 # World APN list
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
