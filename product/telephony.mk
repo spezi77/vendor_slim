@@ -1,9 +1,3 @@
-# Inherit common stuff
-$(call inherit-product, vendor/slim/config/common.mk)
-
-# Bring in Evervolv a2sd stuff
-$(call inherit-product, vendor/slim/config/tools.mk)
-
 # World APN list
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
@@ -12,10 +6,20 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml
 
-# Selective SPN list for operator number who has the problem.
+# Selective SPN list for operator number who has the problem. 
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
 
-# SIM Toolkit
+
+# Telephony packages
 PRODUCT_PACKAGES += \
-    Stk
+    Mms \
+    Stk \
+    CellBroadcastReceiver \
+
+# Enable CellBroadcastReceiver settings
+PRODUCT_PACKAGE_OVERLAYS += vendor/slim/overlay/phone
+
+# Mms depends on SoundRecorder for recorded audio messages
+PRODUCT_PACKAGES += \
+    SoundRecorder
