@@ -1,3 +1,4 @@
+add_lunch_combo slim_amami-userdebug
 add_lunch_combo slim_bacon-userdebug
 add_lunch_combo slim_crespo-userdebug
 add_lunch_combo slim_d2lte-userdebug
@@ -16,6 +17,9 @@ add_lunch_combo slim_geefhd_att_us-userdebug
 add_lunch_combo slim_grouper-userdebug
 add_lunch_combo slim_hammerhead-userdebug
 add_lunch_combo slim_hlte-userdebug
+add_lunch_combo slim_hltespr-userdebug
+add_lunch_combo slim_hlteusc-userdebug
+add_lunch_combo slim_hltevzw-userdebug
 add_lunch_combo slim_honami-userdebug
 add_lunch_combo slim_i777-userdebug
 add_lunch_combo slim_i9100-userdebug
@@ -32,6 +36,7 @@ add_lunch_combo slim_m8-userdebug
 add_lunch_combo slim_maguro-userdebug
 add_lunch_combo slim_mako-userdebug
 add_lunch_combo slim_manta-userdebug
+add_lunch_combo slim_mondrianwifi-userdebug
 add_lunch_combo slim_moto_msm8960-userdebug
 add_lunch_combo slim_moto_msm8960dt-userdebug
 add_lunch_combo slim_n5100-userdebug
@@ -49,6 +54,7 @@ add_lunch_combo slim_skyrocket-userdebug
 add_lunch_combo slim_t0lte-userdebug
 add_lunch_combo slim_t0lteatt-userdebug
 add_lunch_combo slim_t0ltetmo-userdebug
+add_lunch_combo slim_taoshan-userdebug
 add_lunch_combo slim_tilapia-userdebug
 add_lunch_combo slim_toro-userdebug
 add_lunch_combo slim_toroplus-userdebug
