@@ -41,10 +41,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/lib/libjni_latinime.so:system/lib/libjni_latinime.so
 
-# Copy libgif for Nova Launcher 3.0
-PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/lib/libgif.so:system/lib/libgif.so
-
 # SELinux filesystem labels
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
@@ -62,13 +58,6 @@ PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/slim/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
     vendor/slim/prebuilt/common/bin/sysinit:system/bin/sysinit
-
-# Workaround for NovaLauncher zipalign fails
-PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/app/NovaLauncher.apk:system/app/NovaLauncher.apk
-
-# Theme engine
-include vendor/slim/config/themes_common.mk
 
 # Embed SuperUser
 SUPERUSER_EMBEDDED := true
@@ -100,6 +89,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SlimCenter \
     SlimFileManager \
+    SlimLauncher \
     LatinIME \
     BluetoothExt \
     DashClock
@@ -167,7 +157,7 @@ endif
 # KitKat SlimKat freeze code
 PRODUCT_VERSION_MAJOR = 4.4.4
 PRODUCT_VERSION_MINOR = build
-PRODUCT_VERSION_MAINTENANCE = 8.0
+PRODUCT_VERSION_MAINTENANCE = 9.0
 ifdef SLIM_BUILD_EXTRA
     SLIM_POSTFIX := -$(SLIM_BUILD_EXTRA)
 endif
