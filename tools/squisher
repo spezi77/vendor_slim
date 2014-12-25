@@ -44,7 +44,7 @@ DELETE_MEDIA="*.qmg"
 DELETE_APKS="LiveWallpapers.apk SpeechRecorder.apk VideoEditor.apk HoloSpiralWallpaper.apk MagicSmokeWallpapers.apk NoiseField.apk Galaxy4.apk OpenWnn.apk PinyinIME.apk"
 DELETE_PRIV_APKS="VoiceDialer.apk"
 DELETE_GALLERY="Gallery2.apk"
-DELETE_FONTS="MTLmr3m.ttf"
+DELETE_FONTS="MTLmr3m.ttf DroidSansFallback.ttf"
 
 REPACK=$OUT/repack.d
 printf "Sanitizing environment..."
