@@ -1,5 +1,6 @@
 add_lunch_combo slim_amami-userdebug
 add_lunch_combo slim_bacon-userdebug
+add_lunch_combo slim_bravo-userdebug
 add_lunch_combo slim_crespo-userdebug
 add_lunch_combo slim_d2att-userdebug
 add_lunch_combo slim_d2mtr-userdebug
