@@ -126,6 +126,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
 
+# Grant root access to ADB + Apps
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=3
+
 PRODUCT_PACKAGE_OVERLAYS += vendor/slim/overlay/common
 
 # Boot animation include
