@@ -41,10 +41,11 @@ OPTICHARGER=$ANDROID_BUILD_TOP/vendor/slim/tools/opticharger
 QUIET=-q
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
 DELETE_MEDIA="*.qmg"
-DELETE_APKS="LiveWallpapers.apk SpeechRecorder.apk VideoEditor.apk HoloSpiralWallpaper.apk MagicSmokeWallpapers.apk NoiseField.apk Galaxy4.apk OpenWnn.apk PinyinIME.apk"
+DELETE_APKS="LiveWallpapers.apk SpeechRecorder.apk VideoEditor.apk HoloSpiralWallpaper.apk MagicSmokeWallpapers.apk NoiseField.apk Galaxy4.apk OpenWnn.apk PinyinIME.apk PicoTts.apk"
 DELETE_PRIV_APKS="VoiceDialer.apk"
 DELETE_GALLERY="Gallery2.apk"
 DELETE_FONTS="MTLmr3m.ttf NanumGothic.ttf DroidSansFallback.ttf Padauk-book.ttf Padauk-bookbold.ttf"
+DELETE_LIBS="libc_malloc_debug_leak.so libc_malloc_debug_qemu.so libttscompat.so libttspico.so"
 
 REPACK=$OUT/repack.d
 printf "Sanitizing environment..."
@@ -97,6 +98,9 @@ $SED -i \
 
 # Delete unnecessary binaries
 ( cd $REPACK/ota/system/bin; echo $DELETE_BINS | xargs rm -f; )
+
+# Delete unnecessary libraries
+( cd $REPACK/ota/system/lib; echo $DELETE_LIBS | xargs rm -f; )
 
 # Delete Offline charging mode files
 ( cd $REPACK/ota/system/media; echo $DELETE_MEDIA | xargs rm -f; )
