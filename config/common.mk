@@ -61,6 +61,13 @@ PRODUCT_COPY_FILES += \
 # Embed SuperUser
 SUPERUSER_EMBEDDED := true
 
+# Grant root privileges to ADB and Apps
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.root_access=3
+
+# Disable ADB authentication
+ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
+
 # Required packages
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
