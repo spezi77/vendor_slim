@@ -98,7 +98,7 @@ PRODUCT_PACKAGES += \
     SlimLauncher \
     LatinIME \
     BluetoothExt \
-    DashClock
+    LockClock
 
 # Extra tools
 PRODUCT_PACKAGES += \
